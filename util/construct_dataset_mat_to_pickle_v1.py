@@ -36,7 +36,7 @@ print(f'start processing ZuCo {task_name}...')
 
 
     # old version 
-input_mat_files_dir = f'{args["directory"]}{task_name}/Matlab_files'
+input_mat_files_dir = f'{args["directory"]}{task_name}/Matlab_files/'
 
 output_dir = f'./dataset/ZuCo/{task_name}/pickle'
 if not os.path.exists(output_dir):
