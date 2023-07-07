@@ -14,6 +14,7 @@ parser = argparse.ArgumentParser(description='Specify task name for converting Z
 parser.add_argument('-t', '--task_name', help='name of the task in /dataset/ZuCo, choose from {task1-SR,task2-NR,task3-TSR}', required=True)
 parser.add_argument('-v', '--version', help='version of the dataset, choose from {v1,v2}', required=True)
 parser.add_argument("-d","--directory", help="directory of the dataset, default: ./dataset/ZuCo", default="./dataset/ZuCo")
+parser.add_argument("-o","--output", help="output directory of the converted pickle files, default: ./dataset/ZuCo/pickle", default="./dataset/ZuCo/pickle")
 args = vars(parser.parse_args())
 
 
