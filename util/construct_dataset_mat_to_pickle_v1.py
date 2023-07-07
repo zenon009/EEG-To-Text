@@ -1,5 +1,5 @@
 import sys
-sys.insert(1,"/home/wrb15144/zenon/EEG-To-Text/")
+sys.path.insert(1,"/home/wrb15144/zenon/EEG-To-Text/")
 import scipy.io as io
 import h5py
 import os
