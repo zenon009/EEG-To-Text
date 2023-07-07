@@ -2,3 +2,4 @@
 *.pickle
 *.mat
 *.json
+**/.idea/
