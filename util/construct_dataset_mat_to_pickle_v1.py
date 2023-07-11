@@ -62,28 +62,34 @@ for mat_file in tqdm(mat_files):
     if version == 'v1':
         matdata = io.loadmat(mat_file, squeeze_me=True, struct_as_record=False)['sentenceData']
     elif version == 'v2':
-        print("loading from : "+mat_file)
-        exit(0)
-        matdata = h5py.File(mat_file,'r')
+        #matdata = h5py.File(mat_file,'r')
         data_dict = mat73.loadmat(mat_file)
         matdata = data_dict["sentenceData"]
-        print(len(matdata["word"]))
-        exit(0)
+        length = len(matdata["word"])
 
 
     # converted_data = convertor.read_matlab(mat_file)
     # with open(f'{output_dir}/{subject_name}.json', 'w') as f:
     #     json.dump(converted_data, f, indent=4)
 
-    for sent in matdata:
-        word_data = sent.word
+    for sent_index in range(length):
+        word_data = matdata["word"][sent_index]
         if not isinstance(word_data, float):
             # sentence level:
-            sent_obj = {'content':sent.content}
-            sent_obj['sentence_level_EEG'] = {'mean_t1':sent.mean_t1, 'mean_t2':sent.mean_t2, 'mean_a1':sent.mean_a1, 'mean_a2':sent.mean_a2, 'mean_b1':sent.mean_b1, 'mean_b2':sent.mean_b2, 'mean_g1':sent.mean_g1, 'mean_g2':sent.mean_g2}
+            sent_obj = {'content':matdata["content"][sent_index]}
+            sent_obj['sentence_level_EEG'] = {'mean_t1':matdata["mean_t1"][sent_index], 'mean_t2':matdata["mean_t2"][sent_index],
+                                              'mean_a1':matdata["mean_a1"][sent_index], 'mean_a2':matdata["mean_a2"][sent_index], 'mean_b1':matdata["mean_b1"][sent_index],
+                                              'mean_b2':matdata["mean_b2"][sent_index], 'mean_g1':matdata["mean_g1"][sent_index], 'mean_g2':matdata["mean_g2"][sent_index]}
 
             if task_name == 'task1-SR':
-                sent_obj['answer_EEG'] = {'answer_mean_t1':sent.answer_mean_t1, 'answer_mean_t2':sent.answer_mean_t2, 'answer_mean_a1':sent.answer_mean_a1, 'answer_mean_a2':sent.answer_mean_a2, 'answer_mean_b1':sent.answer_mean_b1, 'answer_mean_b2':sent.answer_mean_b2, 'answer_mean_g1':sent.answer_mean_g1, 'answer_mean_g2':sent.answer_mean_g2}
+                sent_obj['answer_EEG'] = {'answer_mean_t1':matdata["answer_mean_t1"][sent_index],
+                                          'answer_mean_t2':matdata["answer_mean_t2"][sent_index],
+                                          'answer_mean_a1':matdata["answer_mean_a1"][sent_index],
+                                          'answer_mean_a2':matdata["answer_mean_a2"][sent_index],
+                                          'answer_mean_b1':matdata["answer_mean_b1"][sent_index],
+                                          'answer_mean_b2':matdata["answer_mean_b2"][sent_index],
+                                          'answer_mean_g1':matdata["answer_mean_g1"][sent_index],
+                                          'answer_mean_g2':matdata["answer_mean_g2"][sent_index]}
 
             # word level:
             sent_obj['word'] = []
@@ -107,8 +113,8 @@ for mat_file in tqdm(mat_files):
                 else:
                     word_tokens_with_mask.append('[MASK]')
                     # if a word has no fixation, use sentence level feature
-                    # word_obj['word_level_EEG'] = {'FFD':{'FFD_t1':sent.mean_t1, 'FFD_t2':sent.mean_t2, 'FFD_a1':sent.mean_a1, 'FFD_a2':sent.mean_a2, 'FFD_b1':sent.mean_b1, 'FFD_b2':sent.mean_b2, 'FFD_g1':sent.mean_g1, 'FFD_g2':sent.mean_g2}}
-                    # word_obj['word_level_EEG']['TRT'] = {'TRT_t1':sent.mean_t1, 'TRT_t2':sent.mean_t2, 'TRT_a1':sent.mean_a1, 'TRT_a2':sent.mean_a2, 'TRT_b1':sent.mean_b1, 'TRT_b2':sent.mean_b2, 'TRT_g1':sent.mean_g1, 'TRT_g2':sent.mean_g2}
+                    # word_obj['word_level_EEG'] = {'FFD':{'FFD_t1':matdatamean_t1, 'FFD_t2':matdatamean_t2, 'FFD_a1':matdatamean_a1, 'FFD_a2':matdatamean_a2, 'FFD_b1':matdatamean_b1, 'FFD_b2':matdatamean_b2, 'FFD_g1':matdatamean_g1, 'FFD_g2':matdatamean_g2}}
+                    # word_obj['word_level_EEG']['TRT'] = {'TRT_t1':matdatamean_t1, 'TRT_t2':matdatamean_t2, 'TRT_a1':matdatamean_a1, 'TRT_a2':matdatamean_a2, 'TRT_b1':matdatamean_b1, 'TRT_b2':matdatamean_b2, 'TRT_g1':matdatamean_g1, 'TRT_g2':matdatamean_g2}
 
                     # NOTE:if a word has no fixation, simply skip it
                     continue
@@ -118,9 +124,11 @@ for mat_file in tqdm(mat_files):
             sent_obj['word_tokens_all'] = word_tokens_all
 
             dataset_dict[subject_name].append(sent_obj)
+            with open(mat_file.replace('.mat','.json'), 'w') as out:
+                json.dump(sent_obj,out,indent = 4)
 
         else:
-            print(f'missing sent: subj:{subject_name} content:{sent.content}, return None')
+            print(f'missing sent: subj:{subject_name} content:{matdata["content"][sent_index]}, return None')
             dataset_dict[subject_name].append(None)
 
             continue
