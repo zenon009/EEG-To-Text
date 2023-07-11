@@ -21,7 +21,7 @@
  #SBATCH --ntasks=20
  #
  # Specify (hard) runtime (HH:MM:SS)
- #SBATCH --time=12:00:00
+ #SBATCH --time=72:00:00
  #
  # Job name
  #SBATCH --job-name=extracting_info

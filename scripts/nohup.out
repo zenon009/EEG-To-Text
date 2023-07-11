@@ -1,8 +1,0 @@
-This scirpt construct .pickle files from .mat files from ZuCo dataset.
-This script also generates tenary sentiment_labels.json file for ZuCo task1-SR v1.0 and ternary_dataset.json from filtered StanfordSentimentTreebank
-Note: the sentences in ZuCo task1-SR do not overlap with sentences in filtered StanfordSentimentTreebank 
-Note: This process can take time, please be patient...
-##############################
-start processing ZuCo task1-SR...
-Convertor object created
-  0%|          | 0/12 [00:00<?, ?it/s]
