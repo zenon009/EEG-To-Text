@@ -103,26 +103,27 @@ for mat_file in tqdm(mat_files):
                 word_tokens_all.append(word_data["content"][word_index])
                 # TODO: add more version of word level eeg: GD, SFD, GPT
                 word_obj['nFixations'] = word_data["nFixations"][word_index]
-                if word_data["nFixations"][word_index].tolist() > 0:
-                    word_obj['word_level_EEG'] = {'FFD':{'FFD_t1':word_data["FFD_t1"][word_index], 'FFD_t2':word_data["FFD_t2"][word_index], 'FFD_a1':word_data["FFD_a1"][word_index],
-                                                         'FFD_a2':word_data["FFD_a2"][word_index], 'FFD_b1':word_data["FFD_b1"][word_index], 'FFD_b2':word_data["FFD_b2"][word_index], 'FFD_g1':word_data["FFD_g1"][word_index],
-                                                         'FFD_g2':word_data["FFD_g2"][word_index]}}
-                    word_obj['word_level_EEG']['TRT'] = {'TRT_t1':word_data["TRT_t1"][word_index],
-                                                         'TRT_t2':word_data["TRT_t2"][word_index],
-                                                         'TRT_a1':word_data["TRT_a1"][word_index],
-                                                         'TRT_a2':word_data["TRT_a2"][word_index],
-                                                         'TRT_b1':word_data["TRT_b1"][word_index],
-                                                         'TRT_b2':word_data["TRT_b2"][word_index],
-                                                         'TRT_g1':word_data["TRT_g1"][word_index],
-                                                         'TRT_g2':word_data["TRT_g2"][word_index]}
-                    word_obj['word_level_EEG']['GD'] = {'GD_t1':word_data["GD_t1"][word_index],
-                                                        'GD_t2':word_data["GD_t2"][word_index],
-                                                        'GD_a1':word_data["GD_a1"][word_index],
-                                                        'GD_a2':word_data["GD_a2"][word_index],
-                                                        'GD_b1':word_data["GD_b1"][word_index],
-                                                        'GD_b2':word_data["GD_b2"][word_index],
-                                                        'GD_g1':word_data["GD_g1"][word_index],
-                                                        'GD_g2':word_data["GD_g2"][word_index]}
+                if word_data["nFixations"][word_index].tolist() is not None:
+                    if word_data["nFixations"][word_index].tolist() > 0:
+                        word_obj['word_level_EEG'] = {'FFD':{'FFD_t1':word_data["FFD_t1"][word_index], 'FFD_t2':word_data["FFD_t2"][word_index], 'FFD_a1':word_data["FFD_a1"][word_index],
+                                                             'FFD_a2':word_data["FFD_a2"][word_index], 'FFD_b1':word_data["FFD_b1"][word_index], 'FFD_b2':word_data["FFD_b2"][word_index], 'FFD_g1':word_data["FFD_g1"][word_index],
+                                                             'FFD_g2':word_data["FFD_g2"][word_index]}}
+                        word_obj['word_level_EEG']['TRT'] = {'TRT_t1':word_data["TRT_t1"][word_index],
+                                                             'TRT_t2':word_data["TRT_t2"][word_index],
+                                                             'TRT_a1':word_data["TRT_a1"][word_index],
+                                                             'TRT_a2':word_data["TRT_a2"][word_index],
+                                                             'TRT_b1':word_data["TRT_b1"][word_index],
+                                                             'TRT_b2':word_data["TRT_b2"][word_index],
+                                                             'TRT_g1':word_data["TRT_g1"][word_index],
+                                                             'TRT_g2':word_data["TRT_g2"][word_index]}
+                        word_obj['word_level_EEG']['GD'] = {'GD_t1':word_data["GD_t1"][word_index],
+                                                            'GD_t2':word_data["GD_t2"][word_index],
+                                                            'GD_a1':word_data["GD_a1"][word_index],
+                                                            'GD_a2':word_data["GD_a2"][word_index],
+                                                            'GD_b1':word_data["GD_b1"][word_index],
+                                                            'GD_b2':word_data["GD_b2"][word_index],
+                                                            'GD_g1':word_data["GD_g1"][word_index],
+                                                            'GD_g2':word_data["GD_g2"][word_index]}
                     sent_obj['word'].append(word_obj)
                     word_tokens_has_fixation.append(word_data["content"][word_index])
                     word_tokens_with_mask.append(word_data["content"][word_index])
