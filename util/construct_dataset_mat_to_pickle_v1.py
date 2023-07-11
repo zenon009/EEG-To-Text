@@ -98,18 +98,34 @@ for mat_file in tqdm(mat_files):
             word_tokens_with_mask = []
             word_tokens_all = []
 
-            for word in word_data:
-                word_obj = {'content':word.content}
-                word_tokens_all.append(word.content)
+            for word_index in range(len(word_data)):
+                word_obj = {'content':word_data["content"][word_index]}
+                word_tokens_all.append(word_data["content"][word_index])
                 # TODO: add more version of word level eeg: GD, SFD, GPT
-                word_obj['nFixations'] = word.nFixations
-                if word.nFixations > 0:
-                    word_obj['word_level_EEG'] = {'FFD':{'FFD_t1':word.FFD_t1, 'FFD_t2':word.FFD_t2, 'FFD_a1':word.FFD_a1, 'FFD_a2':word.FFD_a2, 'FFD_b1':word.FFD_b1, 'FFD_b2':word.FFD_b2, 'FFD_g1':word.FFD_g1, 'FFD_g2':word.FFD_g2}}
-                    word_obj['word_level_EEG']['TRT'] = {'TRT_t1':word.TRT_t1, 'TRT_t2':word.TRT_t2, 'TRT_a1':word.TRT_a1, 'TRT_a2':word.TRT_a2, 'TRT_b1':word.TRT_b1, 'TRT_b2':word.TRT_b2, 'TRT_g1':word.TRT_g1, 'TRT_g2':word.TRT_g2}
-                    word_obj['word_level_EEG']['GD'] = {'GD_t1':word.GD_t1, 'GD_t2':word.GD_t2, 'GD_a1':word.GD_a1, 'GD_a2':word.GD_a2, 'GD_b1':word.GD_b1, 'GD_b2':word.GD_b2, 'GD_g1':word.GD_g1, 'GD_g2':word.GD_g2}
+                word_obj['nFixations'] = word_data["nFixations"][word_index]
+                if word_data["nFixations"][word_index] > 0:
+                    word_obj['word_level_EEG'] = {'FFD':{'FFD_t1':word_data["FFD_t1"][word_index], 'FFD_t2':word_data["FFD_t2"][word_index], 'FFD_a1':word_data["FFD_a1"][word_index],
+                                                         'FFD_a2':word_data["FFD_a2"][word_index], 'FFD_b1':word_data["FFD_b1"][word_index], 'FFD_b2':word_data["FFD_b2"][word_index], 'FFD_g1':word_data["FFD_g1"][word_index],
+                                                         'FFD_g2':word_data["FFD_g2"][word_index]}}
+                    word_obj['word_level_EEG']['TRT'] = {'TRT_t1':word_data["TRT_t1"][word_index],
+                                                         'TRT_t2':word_data["TRT_t2"][word_index],
+                                                         'TRT_a1':word_data["TRT_a1"][word_index],
+                                                         'TRT_a2':word_data["TRT_a2"][word_index],
+                                                         'TRT_b1':word_data["TRT_b1"][word_index],
+                                                         'TRT_b2':word_data["TRT_b2"][word_index],
+                                                         'TRT_g1':word_data["TRT_g1"][word_index],
+                                                         'TRT_g2':word_data["TRT_g2"][word_index]}
+                    word_obj['word_level_EEG']['GD'] = {'GD_t1':word_data["GD_t1"][word_index],
+                                                        'GD_t2':word_data["GD_t2"][word_index],
+                                                        'GD_a1':word_data["GD_a1"][word_index],
+                                                        'GD_a2':word_data["GD_a2"][word_index],
+                                                        'GD_b1':word_data["GD_b1"][word_index],
+                                                        'GD_b2':word_data["GD_b2"][word_index],
+                                                        'GD_g1':word_data["GD_g1"][word_index],
+                                                        'GD_g2':word_data["GD_g2"][word_index]}
                     sent_obj['word'].append(word_obj)
-                    word_tokens_has_fixation.append(word.content)
-                    word_tokens_with_mask.append(word.content)
+                    word_tokens_has_fixation.append(word_data["content"][word_index])
+                    word_tokens_with_mask.append(word_data["content"][word_index])
                 else:
                     word_tokens_with_mask.append('[MASK]')
                     # if a word has no fixation, use sentence level feature
