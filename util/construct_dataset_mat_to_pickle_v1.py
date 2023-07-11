@@ -97,8 +97,8 @@ for mat_file in tqdm(mat_files):
             word_tokens_has_fixation = []
             word_tokens_with_mask = []
             word_tokens_all = []
-
-            for word_index in range(len(word_data)):
+            word_length = len(word_data["content"])
+            for word_index in range(word_length):
                 word_obj = {'content':word_data["content"][word_index]}
                 word_tokens_all.append(word_data["content"][word_index])
                 # TODO: add more version of word level eeg: GD, SFD, GPT
