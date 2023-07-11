@@ -15,7 +15,15 @@ import pickle
 import argparse
 
 from util.Convertor import Convertor
-
+def check_if_numpy_array(data):
+    if isinstance(data, np.ndarray):
+        return data.tolist()
+    else:
+        return data
+def convert_dictionary(dict):
+    for key in dict.keys():
+        dict[key] = check_if_numpy_array(dict[key])
+    return dict
 parser = argparse.ArgumentParser(description='Specify task name for converting ZuCo v1.0 Mat file to Pickle')
 parser.add_argument('-t', '--task_name', help='name of the task in /dataset/ZuCo, choose from {task1-SR,task2-NR,task3-TSR}', required=True)
 parser.add_argument('-v', '--version', help='version of the dataset, choose from {v1,v2}', required=True)
@@ -80,7 +88,7 @@ for mat_file in tqdm(mat_files):
             sent_obj['sentence_level_EEG'] = {'mean_t1':matdata["mean_t1"][sent_index], 'mean_t2':matdata["mean_t2"][sent_index],
                                               'mean_a1':matdata["mean_a1"][sent_index], 'mean_a2':matdata["mean_a2"][sent_index], 'mean_b1':matdata["mean_b1"][sent_index],
                                               'mean_b2':matdata["mean_b2"][sent_index], 'mean_g1':matdata["mean_g1"][sent_index], 'mean_g2':matdata["mean_g2"][sent_index]}
-
+            sent_obj['sentence_level_EEG'] = convert_dictionary(sent_obj['sentence_level_EEG'])
             if task_name == 'task1-SR':
                 sent_obj['answer_EEG'] = {'answer_mean_t1':matdata["answer_mean_t1"][sent_index],
                                           'answer_mean_t2':matdata["answer_mean_t2"][sent_index],
@@ -90,6 +98,7 @@ for mat_file in tqdm(mat_files):
                                           'answer_mean_b2':matdata["answer_mean_b2"][sent_index],
                                           'answer_mean_g1':matdata["answer_mean_g1"][sent_index],
                                           'answer_mean_g2':matdata["answer_mean_g2"][sent_index]}
+                sent_obj['answer_EEG'] = convert_dictionary(sent_obj['answer_EEG'])
 
             # word level:
             sent_obj['word'] = []
@@ -108,6 +117,7 @@ for mat_file in tqdm(mat_files):
                         word_obj['word_level_EEG'] = {'FFD':{'FFD_t1':word_data["FFD_t1"][word_index], 'FFD_t2':word_data["FFD_t2"][word_index], 'FFD_a1':word_data["FFD_a1"][word_index],
                                                              'FFD_a2':word_data["FFD_a2"][word_index], 'FFD_b1':word_data["FFD_b1"][word_index], 'FFD_b2':word_data["FFD_b2"][word_index], 'FFD_g1':word_data["FFD_g1"][word_index],
                                                              'FFD_g2':word_data["FFD_g2"][word_index]}}
+                        word_obj['word_level_EEG']['FFD'] = convert_dictionary(word_obj['word_level_EEG']['FFD'])
                         word_obj['word_level_EEG']['TRT'] = {'TRT_t1':word_data["TRT_t1"][word_index],
                                                              'TRT_t2':word_data["TRT_t2"][word_index],
                                                              'TRT_a1':word_data["TRT_a1"][word_index],
@@ -116,6 +126,7 @@ for mat_file in tqdm(mat_files):
                                                              'TRT_b2':word_data["TRT_b2"][word_index],
                                                              'TRT_g1':word_data["TRT_g1"][word_index],
                                                              'TRT_g2':word_data["TRT_g2"][word_index]}
+                        word_obj['word_level_EEG']['TRT'] = convert_dictionary(word_obj['word_level_EEG']['TRT'])
                         word_obj['word_level_EEG']['GD'] = {'GD_t1':word_data["GD_t1"][word_index],
                                                             'GD_t2':word_data["GD_t2"][word_index],
                                                             'GD_a1':word_data["GD_a1"][word_index],
@@ -124,6 +135,7 @@ for mat_file in tqdm(mat_files):
                                                             'GD_b2':word_data["GD_b2"][word_index],
                                                             'GD_g1':word_data["GD_g1"][word_index],
                                                             'GD_g2':word_data["GD_g2"][word_index]}
+                        word_obj['word_level_EEG']['GD'] = convert_dictionary(word_obj['word_level_EEG']['GD'])
                     sent_obj['word'].append(word_obj)
                     word_tokens_has_fixation.append(word_data["content"][word_index])
                     word_tokens_with_mask.append(word_data["content"][word_index])
