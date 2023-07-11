@@ -103,7 +103,7 @@ for mat_file in tqdm(mat_files):
                 word_tokens_all.append(word_data["content"][word_index])
                 # TODO: add more version of word level eeg: GD, SFD, GPT
                 word_obj['nFixations'] = word_data["nFixations"][word_index]
-                if word_data["nFixations"][word_index].tolist() is not None:
+                if word_data["nFixations"][word_index] is not None:
                     if word_data["nFixations"][word_index].tolist() > 0:
                         word_obj['word_level_EEG'] = {'FFD':{'FFD_t1':word_data["FFD_t1"][word_index], 'FFD_t2':word_data["FFD_t2"][word_index], 'FFD_a1':word_data["FFD_a1"][word_index],
                                                              'FFD_a2':word_data["FFD_a2"][word_index], 'FFD_b1':word_data["FFD_b1"][word_index], 'FFD_b2':word_data["FFD_b2"][word_index], 'FFD_g1':word_data["FFD_g1"][word_index],
