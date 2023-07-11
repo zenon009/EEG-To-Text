@@ -65,7 +65,7 @@ for mat_file in tqdm(mat_files):
         matdata = h5py.File(mat_file,'r')
         data_dict = mat73.loadmat(mat_file)
         matdata = data_dict["sentenceData"]
-        print(matdata)
+        print(len(matdata["word"]))
         exit(0)
 
 
