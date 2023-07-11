@@ -62,6 +62,8 @@ for mat_file in tqdm(mat_files):
     if version == 'v1':
         matdata = io.loadmat(mat_file, squeeze_me=True, struct_as_record=False)['sentenceData']
     elif version == 'v2':
+        print("loading from : "+mat_file)
+        exit(0)
         matdata = h5py.File(mat_file,'r')
         data_dict = mat73.loadmat(mat_file)
         matdata = data_dict["sentenceData"]
