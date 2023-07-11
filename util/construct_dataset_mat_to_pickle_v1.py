@@ -156,8 +156,7 @@ for mat_file in tqdm(mat_files):
             sent_obj['word_tokens_all'] = word_tokens_all
 
             dataset_dict[subject_name].append(sent_obj)
-            with open(mat_file.replace('.mat','.json'), 'w') as out:
-                json.dump(sent_obj,out,indent = 4)
+
 
         else:
             print(f'missing sent: subj:{subject_name} content:{matdata["content"][sent_index]}, return None')
@@ -169,6 +168,8 @@ for mat_file in tqdm(mat_files):
     # print(dataset_dict[subject_name][0]['content'])
     # print(dataset_dict[subject_name][0]['word'][0].keys())
     # print(dataset_dict[subject_name][0]['word'][0]['word_level_EEG']['FFD'])
+    with open(mat_file.replace('.mat', '.json'), 'w') as out:
+        json.dump(dataset_dict, out, indent=4)
 
 """output"""
 output_name = f'{task_name}-dataset.pickle'
