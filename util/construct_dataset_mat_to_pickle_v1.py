@@ -1,11 +1,9 @@
 import sys
 
 import mat73
-import numpy
 
-from util.Converter_V2 import converter
 
-sys.path.insert(1,"/users/wrb15144/EEG-To-Text/")
+sys.path.insert(1,"/home/wrb15144/zenon/EEG-To-Text/")
 import scipy.io as io
 import h5py
 import os
@@ -67,6 +65,8 @@ for mat_file in tqdm(mat_files):
         matdata = h5py.File(mat_file,'r')
         data_dict = mat73.loadmat(mat_file)
         matdata = data_dict["sentenceData"]
+        print(matdata)
+        exit(0)
 
 
     # converted_data = convertor.read_matlab(mat_file)
