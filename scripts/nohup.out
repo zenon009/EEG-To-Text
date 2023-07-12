@@ -3,6 +3,26 @@ This script also generates tenary sentiment_labels.json file for ZuCo task1-SR v
 Note: the sentences in ZuCo task1-SR do not overlap with sentences in filtered StanfordSentimentTreebank 
 Note: This process can take time, please be patient...
 ##############################
-start processing ZuCo task1-SR...
+start processing ZuCo task2-NR...
 Convertor object created
-  0%|          | 0/12 [00:00<?, ?it/s]
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [04:17<42:58, 257.82s/it] 18%|█▊        | 2/11 [08:43<39:22, 262.55s/it] 27%|██▋       | 3/11 [13:10<35:14, 264.33s/it] 36%|███▋      | 4/11 [18:10<32:29, 278.51s/it] 45%|████▌     | 5/11 [23:41<29:43, 297.31s/it] 55%|█████▍    | 6/11 [29:32<26:19, 315.86s/it] 64%|██████▎   | 7/11 [35:20<21:44, 326.23s/it] 73%|███████▎  | 8/11 [41:18<16:48, 336.26s/it] 82%|████████▏ | 9/11 [47:47<11:45, 352.96s/it] 91%|█████████ | 10/11 [54:10<06:02, 362.05s/it] 91%|█████████ | 10/11 [54:10<05:25, 325.03s/it]
+Traceback (most recent call last):
+  File "/home/wrb15144/.local/lib/python3.8/site-packages/mat73/core.py", line 321, in loadmat
+    with h5py.File(filename, 'r') as hdf5:
+  File "/home/wrb15144/.local/lib/python3.8/site-packages/h5py/_hl/files.py", line 567, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/home/wrb15144/.local/lib/python3.8/site-packages/h5py/_hl/files.py", line 231, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
+OSError: Unable to open file (file signature not found)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../util/construct_dataset_mat_to_pickle_v1.py", line 74, in <module>
+    data_dict = mat73.loadmat(mat_file)
+  File "/home/wrb15144/.local/lib/python3.8/site-packages/mat73/core.py", line 325, in loadmat
+    raise TypeError('{} is not a MATLAB 7.3 file. '\
+TypeError: /vol/bulkdata/wrb15144/encoder_decoder/osfstorage-archive/task2-NR/Matlab_files/resultsZPH_NR.mat is not a MATLAB 7.3 file. Load with scipy.io.loadmat() instead.
