@@ -92,9 +92,10 @@ for mat_file in tqdm(mat_files):
             version = 'v1'
 
     if version == 'v2':
-        reader.read_matlab_v2(length,matdata,task_name,subject_name)
+        dataset_dict[subject_name] = reader.read_matlab_v2(length,matdata,task_name,subject_name)
     else:
-        reader.read_matlab_v1(task_name,subject_name,matdata)
+        dataset_dict[subject_name] = reader.read_matlab_v1(task_name,subject_name,matdata)
+    version = args["version"]
 
 
     # converted_data = convertor.read_matlab(mat_file)
@@ -107,13 +108,14 @@ for mat_file in tqdm(mat_files):
     # print(dataset_dict[subject_name][0]['content'])
     # print(dataset_dict[subject_name][0]['word'][0].keys())
     # print(dataset_dict[subject_name][0]['word'][0]['word_level_EEG']['FFD'])
-    with open(mat_file.replace('.mat', '.json'), 'w') as out:
-        json.dump(dataset_dict, out, indent=4)
+
 
 """output"""
 output_name = f'{task_name}-dataset.pickle'
 # with open(os.path.join(output_dir,'task1-SR-dataset.json'), 'w') as out:
 #     json.dump(dataset_dict,out,indent = 4)
+with open(os.path.join(output_dir,output_name), 'w') as out:
+    json.dump(dataset_dict, out, indent=4)
 
 with open(os.path.join(output_dir,output_name), 'wb') as handle:
     pickle.dump(dataset_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
