@@ -112,7 +112,7 @@ for mat_file in tqdm(mat_files):
 output_name = f'{task_name}-dataset.pickle'
 # with open(os.path.join(output_dir,'task1-SR-dataset.json'), 'w') as out:
 #     json.dump(dataset_dict,out,indent = 4)
-with open(os.path.join(output_dir,output_name), 'w') as out:
+with open(os.path.join(args["output"],output_name.replace(".pickle",".json")), 'w') as out:
     json.dump(dataset_dict, out, indent=4)
 
 with open(os.path.join(output_dir,output_name), 'wb') as handle:
