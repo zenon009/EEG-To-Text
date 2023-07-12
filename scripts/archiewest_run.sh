@@ -43,7 +43,7 @@
  #------------------------------------------------------
 
  # Modify the line below to run your program
- python ../util/construct_dataset_mat_to_pickle_v1.py -t task1-SR -v "v2" -d "/users/wrb15144/temp_data/osfstorage-archive/" -o "/users/wrb15144/temp_data/preprocessed_zuco_1/task1"
+ python ../util/construct_dataset_mat_to_pickle_v1.py -t task1-SR -v "v2" -d "/users/wrb15144/temp_data/osfstorage-archive/" -o "/users/wrb15144/temp_data/preprocessed_zuco_1/task1" -m "archie-west"
 
  #======================================================
  # Epilogue script to record job endtime and runtime
