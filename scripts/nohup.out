@@ -1,0 +1,162 @@
+===================================================================================
+SLURM Job ID:            
+Submit time:             Wed Jul 05 15:59:35 BST 2023 (Unix Epoch time: 1688569175)
+Start time:              Thu Jul 06 03:26:38 BST 2023 (Unix Epoch time: 1688610398)
+No. nodes:               
+No. tasks:               
+Job name:                
+Account:                 
+QoS:                     normal
+Partition (queue):       
+Submit directory:        
+Script name:             /users/kbb22110/Gaussian/run_script_M08.sh
+Master node:             
+Nodes used:              
+Task distribution:       
+===================================================================================
+
+Traceback (most recent call last):
+  File "../util/construct_dataset_mat_to_pickle_v1.py", line 17, in <module>
+    from util.Convertor import Convertor
+ModuleNotFoundError: No module named 'util'
+===================================================================================
+SLURM job  ended:     Wed Jul 12 08:02:47 BST 2023 (Unix Epoch time: 1689145367)
+This is an estimated end time using the 'date' command from node archie-t.hpc.strath.ac.uk
+For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
+======================================================================================
+===================================================================================
+SLURM Job ID:            
+Submit time:             Wed Jul 05 15:59:35 BST 2023 (Unix Epoch time: 1688569175)
+Start time:              Thu Jul 06 03:26:38 BST 2023 (Unix Epoch time: 1688610398)
+No. nodes:               
+No. tasks:               
+Job name:                
+Account:                 
+QoS:                     normal
+Partition (queue):       
+Submit directory:        
+Script name:             /users/kbb22110/Gaussian/run_script_M08.sh
+Master node:             
+Nodes used:              
+Task distribution:       
+===================================================================================
+
+##############################
+start processing ZuCo task1-SR...
+Convertor object created
+Reader object created
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|#         | 1/10 [00:09<01:22,  9.15s/it] 10%|#         | 1/10 [00:09<01:23,  9.23s/it]
+missing sent: subj:ZDN content:It's everything you don't go to the movies for., return None
+missing sent: subj:ZDN content:Harris is supposed to be the star of the story, but comes across as pretty dull and wooden., return None
+missing sent: subj:ZDN content:Allen's funniest and most likeable movie in years., return None
+missing sent: subj:ZDN content:For those who pride themselves on sophisticated, discerning taste, this might not seem like the proper cup of tea, however it is almost guaranteed that even the stuffiest cinema goers will laugh their 1*** off for an hour-and-a-half., return None
+missing sent: subj:ZDN content:There is a refreshing absence of cynicism in Stuart Little 2 -- quite a rarity, even in the family film market., return None
+missing sent: subj:ZDN content:There are plot holes big enough for Shamu the killer whale to swim through., return None
+missing sent: subj:ZDN content:... always remains movingly genuine., return None
+missing sent: subj:ZDN content:Stitch is a bad mannered, ugly and destructive little ****., return None
+missing sent: subj:ZDN content:The cast is top-notch and I predict there will be plenty of female audience members drooling over Michael Idemoto as Michael., return None
+missing sent: subj:ZDN content:Kirshner and Monroe seem to be in a contest to see who can out-bad-act the other., return None
+missing sent: subj:ZDN content:This is one of those war movies that focuses on human interaction rather than battle and action sequences... and it's all the stronger because of it., return None
+missing sent: subj:ZDN content:Like life on the island, the movie grows boring despite the scenery., return None
+missing sent: subj:ZDN content:It's anchored by splendid performances from an honored screen veteran and a sparkling newcomer who instantly transform themselves into a believable mother/daughter pair., return None
+missing sent: subj:ZDN content:An atonal estrogen opera that demonizes feminism while gifting the most sympathetic male of the piece with a nice vomit bath at his wedding., return None
+missing sent: subj:ZDN content:Even by the intentionally low standards of frat-boy humor, Sorority Boys is a bowser., return None
+missing sent: subj:ZDN content:Director of photography Benoit Delhomme shot the movie in delicious colors, and the costumes and sets are grand., return None
+missing sent: subj:ZDN content:The only entertainment you'll derive from this choppy and sloppy affair will be from unintentional giggles -- several of them., return None
+missing sent: subj:ZDN content:The film serves as a valuable time capsule to remind us of the devastating horror suffered by an entire people., return None
+missing sent: subj:ZDN content:A bittersweet contemporary comedy about benevolent deception, which, while it may not rival the filmmaker's period pieces, is still very much worth seeing., return None
+missing sent: subj:ZDN content:Attal pushes too hard to make this a comedy or serious drama., return None
+missing sent: subj:ZDN content:Isabelle Huppert excels as the enigmatic Mika and Anna Mouglalis is a stunning new young talent in one of Chabrol's most intense psychological mysteries., return None
+missing sent: subj:ZDN content:A small movie with a big impact., return None
+missing sent: subj:ZDN content:This bold and lyrical first feature from Raja Amari expands the pat notion that middle-aged women just wanna have fun into a rousing treatise of sensual empowerment., return None
+missing sent: subj:ZDN content:Photographed with melancholy richness and eloquently performed yet also decidedly uncinematic., return None
+missing sent: subj:ZDN content:Hey Arnold! is now stretched to barely feature length, with a little more attention paid to the animation., return None
+missing sent: subj:ZDN content:After that, it just gets stupid and maudlin., return None
+missing sent: subj:ZDN content:The stunning, dreamlike visuals will impress even those viewers who have little patience for Euro-film pretension., return None
+missing sent: subj:ZDN content:Plods along, minus the twisted humor and eye-popping visuals that have made Miike... a cult hero., return None
+missing sent: subj:ZDN content:Impresses as a skillfully assembled, highly polished and professional adaptation... just about as chilling and unsettling as `Manhunter' was., return None
+missing sent: subj:ZDN content:For the most part, it's a work of incendiary genius, steering clear of knee-jerk reactions and quick solutions., return None
+missing sent: subj:ZDN content:It's badly acted, blandly directed, and could have been scripted by someone who just graduated from elementary school., return None
+missing sent: subj:ZDN content:The sort of picture in which, whenever one of the characters has some serious soul searching to do, they go to a picture-perfect beach during sunset., return None
+missing sent: subj:ZDN content:Despite its raucous intent, XXX is as conventional as a Nike ad and as rebellious as spring break., return None
+missing sent: subj:ZDN content:... a roller-coaster ride of a movie, return None
+missing sent: subj:ZDN content:A colorful, vibrant introduction to a universal human impulse, lushly photographed and beautifully recorded., return None
+missing sent: subj:ZDN content:Audiard successfully maintains suspense on different levels throughout a film that is both gripping and compelling., return None
+missing sent: subj:ZDN content:Even horror fans will most likely not find what they're seeking with Trouble Every Day; the movie lacks both thrills and humor., return None
+missing sent: subj:ZDN content:After that it becomes long and tedious like a classroom play in a college history course., return None
+missing sent: subj:ZDN content:This is cool, slick stuff, ready to quench the thirst of an audience that misses the summer blockbusters., return None
+missing sent: subj:ZDN content:Blade II has a brilliant director and charismatic star, but it suffers from rampant vampire devaluation., return None
+missing sent: subj:ZDN content:A loud, ugly, irritating movie without any of its satirical salvos hitting a discernible target., return None
+missing sent: subj:ZDN content:For VeggieTales fans, this is more appetizing than a side dish of asparagus., return None
+missing sent: subj:ZDN content:While it regards 1967 as the key turning point of the 20th century, and returns again and again to images of dissidents in the streets, it's alarmingly current., return None
+missing sent: subj:ZDN content:A truly wonderful tale combined with stunning animation., return None
+missing sent: subj:ZDN content:Nothing sticks, really, except a lingering creepiness one feels from being dragged through a sad, sordid universe of guns, drugs, avarice and damaged dreams., return None
+missing sent: subj:ZDN content:``Simone'' is a fun and funky look into an artificial creation in a world that thrives on artificiality., return None
+missing sent: subj:ZDN content:It's a hoot watching The Rock chomp on jumbo ants, pull an arrow out of his back, and leap unscathed through raging fire!, return None
+missing sent: subj:ZDN content:While Tattoo borrows heavily from both Seven and The Silence of the Lambs, it manages to maintain both a level of sophisticated intrigue and human-scale characters that suck the audience in., return None
+missing sent: subj:ZDN content:A portrait of an artist., return None
+missing sent: subj:ZDN content:As written by Michael Berg and Michael J. Wilson from a story by Wilson, this relentless, all-wise-guys-all-the-time approach tries way too hard and gets tiring in no time at all., return None
+missing sent: subj:ZDN content:It's the best film of the year so far, the benchmark against which all other Best Picture contenders should be measured., return None
+missing sent: subj:ZDN content:This is one of the biggest disappointments of the year., return None
+missing sent: subj:ZDN content:It never fails to engage us., return None
+missing sent: subj:ZDN content:Denis forges out of the theories of class - based rage and sisterly obsession a razor-sided tuning fork that rings with cultural, sexual and social discord., return None
+missing sent: subj:ZDN content:The movie slides downhill as soon as macho action conventions assert themselves., return None
+missing sent: subj:ZDN content:More romantic, more emotional and ultimately more satisfying than the teary-eyed original., return None
+missing sent: subj:ZDN content:Like the best of Godard's movies... it is visually ravishing, penetrating, impenetrable., return None
+missing sent: subj:ZDN content:The cumulative effect of the movie is repulsive and depressing., return None
+missing sent: subj:ZDN content:Feels like nothing quite so much as a middle-aged moviemaker's attempt to surround himself with beautiful, half-naked women., return None
+missing sent: subj:ZDN content:A very long movie, dull in stretches, with entirely too much focus on meal preparation and igloo construction., return None
+missing sent: subj:ZDN content:In XXX, Diesel is that rare creature -- an action hero with table manners, and one who proves that elegance is more than tattoo deep., return None
+missing sent: subj:ZDN content:I'm not sure which will take longer to heal: the welt on Johnny Knoxville's stomach from a riot-control projectile or my own tortured psyche., return None
+missing sent: subj:ZDN content:While Serving Sara does have a long way to go before it reaches the level of crudity in the latest Austin Powers extravaganza, there's nothing here to match that movie's intermittent moments of inspiration., return None
+missing sent: subj:ZDN content:It's difficult to conceive of anyone who has reached puberty actually finding the characters in Slackers or their antics amusing, let alone funny., return None
+missing sent: subj:ZDN content:It never is, not fully., return None
+missing sent: subj:ZDN content:Not only is Undercover Brother as funny, if not more so, than both Austin Powers films, but it's also one of the smarter, savvier spoofs to come along in some time., return None
+missing sent: subj:ZDN content:It should be mentioned that the set design and interiors of the haunted vessel are more than effectively creepy and moodily lit., return None
+missing sent: subj:ZDN content:With the exception of some fleetingly amusing improvisations by Cedric the Entertainer as Perry's boss, there isn't a redeeming moment here., return None
+missing sent: subj:ZDN content:It's a funny little movie with clever dialogue and likeable characters., return None
+missing sent: subj:ZDN content:``13 Conversations'' holds its goodwill close, but is relatively slow to come to the point., return None
+missing sent: subj:ZDN content:Not the kind of film that will appeal to a mainstream American audience, but there is a certain charm about the film that makes it a suitable entry into the fest circuit., return None
+missing sent: subj:ZDN content:You come away wishing, though, that the movie spent a lot less time trying to make a credible case for reports from the afterlife and a lot more time on the romantic urgency that's at the center of the story., return None
+missing sent: subj:ZDN content:The movie is virtually without context -- journalistic or historical., return None
+missing sent: subj:ZDN content:After sitting through this sloppy, made-for-movie comedy special, it makes me wonder if Lawrence hates criticism so much that he refuses to evaluate his own work., return None
+missing sent: subj:ZDN content:Genuinely touching because it's realistic about all kinds of love., return None
+missing sent: subj:ZDN content:For all the complications, it's all surprisingly predictable., return None
+missing sent: subj:ZDN content:Armed with a game supporting cast, from the pitch-perfect Forster to the always hilarious Meara and Levy, Like Mike shoots and scores, doing its namesake proud., return None
+missing sent: subj:ZDN content:It will guarantee to have you leaving the theater with a smile on your face., return None
+missing sent: subj:ZDN content:The misery of these people becomes just another voyeuristic spectacle, to be consumed and forgotten., return None
+missing sent: subj:ZDN content:A thoroughly awful movie -- dumb, narratively chaotic, visually sloppy... a weird amalgam of `The Thing' and a geriatric `Scream.', return None
+missing sent: subj:ZDN content:One of those staggeringly well-produced, joylessly extravagant pictures that keep whooshing you from one visual marvel to the next, hastily, emptily., return None
+missing sent: subj:ZDN content:Measured against practically any like-themed film other than its Oscar-sweeping franchise predecessor The Silence of the Lambs, Red Dragon rates as an exceptional thriller., return None
+missing sent: subj:ZDN content:The movie has no respect for laws, political correctness or common decency, but it displays something more important: respect for its flawed, crazy people., return None
+missing sent: subj:ZDN content:In a strange way, Egoyan has done too much., return None
+missing sent: subj:ZDN content:After seeing the film, I can tell you that there's no other reason why anyone should bother remembering it., return None
+missing sent: subj:ZDN content:The film is darkly funny in its observation of just how much more grueling and time-consuming the illusion of work is than actual work., return None
+missing sent: subj:ZDN content:In some ways, Lagaan is quintessential Bollywood., return None
+missing sent: subj:ZDN content:Pacino and Williams seem to keep upping the ante on each other, just as their characters do in the film., return None
+missing sent: subj:ZDN content:It would be disingenuous to call Reno a great film, but you can say that about most of the flicks moving in and out of the multiplex., return None
+missing sent: subj:ZDN content:Some movies can get by without being funny simply by structuring the scenes as if they were jokes: a setup, delivery and payoff., return None
+missing sent: subj:ZDN content:Narc can only remind us of brilliant crime dramas without becoming one itself., return None
+missing sent: subj:ZDN content:Narc is a no-bull throwback to 1970s action films., return None
+missing sent: subj:ZDN content:Intriguing and downright intoxicating., return None
+missing sent: subj:ZDN content:The wonderful combination of the sweetness and the extraordinary technical accomplishments of the first film are maintained, but its overall impact falls a little flat with a storyline that never quite delivers the original magic., return None
+missing sent: subj:ZDN content:Perhaps the most annoying thing about Who Is Cletis Tout? is that it's a crime movie made by someone who obviously knows nothing about crime., return None
+missing sent: subj:ZDN content:In addition to scoring high for originality of plot -- putting together familiar themes of family, forgiveness and love in a new way -- Lilo & Stitch has a number of other assets to commend it to movie audiences both innocent and jaded., return None
+missing sent: subj:ZDN content:The quirky drama touches the heart and the funnybone thanks to the energetic and always surprising performance by Rachel Griffiths., return None
+missing sent: subj:ZDN content:At its worst, it implodes in a series of very bad special effects., return None
+missing sent: subj:ZDN content:Bad and baffling from the get-go., return None
+missing sent: subj:ZDN content:The movie is a blast of educational energy, as bouncy animation and catchy songs escort you through the entire 85 minutes., return None
+missing sent: subj:ZDN content:Martyr gets royally screwed and comes back for more., return None
+Traceback (most recent call last):
+  File "../util/construct_dataset_mat_to_pickle_v1.py", line 79, in <module>
+    matdata = io.loadmat(mat_file, squeeze_me=True, struct_as_record=False)['sentenceData']
+  File "/users/wrb15144/EEG-To-Text/venv/lib64/python3.6/site-packages/scipy/io/matlab/mio.py", line 223, in loadmat
+    MR, _ = mat_reader_factory(f, **kwargs)
+  File "/users/wrb15144/EEG-To-Text/venv/lib64/python3.6/site-packages/scipy/io/matlab/mio.py", line 78, in mat_reader_factory
+    raise NotImplementedError('Please use HDF reader for matlab v7.3 files')
+NotImplementedError: Please use HDF reader for matlab v7.3 files
+===================================================================================
+SLURM job  ended:     Wed Jul 12 08:05:04 BST 2023 (Unix Epoch time: 1689145504)
+This is an estimated end time using the 'date' command from node archie-t.hpc.strath.ac.uk
+For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
+======================================================================================
