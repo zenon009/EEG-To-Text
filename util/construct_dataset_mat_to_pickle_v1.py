@@ -94,6 +94,8 @@ for mat_file in tqdm(mat_files):
     else:
         dataset_dict[subject_name] = reader.read_matlab_v1(task_name,subject_name,matdata)
     version = args["version"]
+    with open(f'{output_dir}/{subject_name}.json', 'w') as f:
+        json.dump(dataset_dict[subject_name], f, indent=4)
 
 
     # converted_data = convertor.read_matlab(mat_file)
