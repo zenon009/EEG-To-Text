@@ -1,0 +1,76 @@
+===================================================================================
+SLURM Job ID:            
+Submit time:             Wed Jul 05 15:59:35 BST 2023 (Unix Epoch time: 1688569175)
+Start time:              Thu Jul 06 03:26:38 BST 2023 (Unix Epoch time: 1688610398)
+No. nodes:               
+No. tasks:               
+Job name:                
+Account:                 
+QoS:                     normal
+Partition (queue):       
+Submit directory:        
+Script name:             /users/kbb22110/Gaussian/run_script_M08.sh
+Master node:             
+Nodes used:              
+Task distribution:       
+===================================================================================
+
+##############################
+start processing ZuCo task2-NR...
+Convertor object created
+  0%|          | 0/11 [00:00<?, ?it/s]  0%|          | 0/11 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "../util/construct_dataset_mat_to_pickle_v1.py", line 83, in <module>
+    for sent_index in range(length):
+NameError: name 'length' is not defined
+===================================================================================
+SLURM job  ended:     Tue Jul 11 20:50:44 BST 2023 (Unix Epoch time: 1689105044)
+This is an estimated end time using the 'date' command from node archie-w.hpc.strath.ac.uk
+For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
+======================================================================================
+===================================================================================
+SLURM Job ID:            
+Submit time:             Wed Jul 05 15:59:35 BST 2023 (Unix Epoch time: 1688569175)
+Start time:              Thu Jul 06 03:26:38 BST 2023 (Unix Epoch time: 1688610398)
+No. nodes:               
+No. tasks:               
+Job name:                
+Account:                 
+QoS:                     normal
+Partition (queue):       
+Submit directory:        
+Script name:             /users/kbb22110/Gaussian/run_script_M08.sh
+Master node:             
+Nodes used:              
+Task distribution:       
+===================================================================================
+
+##############################
+start processing ZuCo task1-SR...
+Convertor object created
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|8         | 1/12 [06:59<1:16:58, 419.86s/it] 17%|#6        | 2/12 [14:48<1:14:44, 448.50s/it] 17%|#6        | 2/12 [14:48<1:14:03, 444.33s/it]
+Traceback (most recent call last):
+  File "/users/wrb15144/EEG-To-Text/venv/lib64/python3.6/site-packages/mat73/core.py", line 321, in loadmat
+    with h5py.File(filename, 'r') as hdf5:
+  File "/users/wrb15144/EEG-To-Text/venv/lib64/python3.6/site-packages/h5py/_hl/files.py", line 427, in __init__
+    swmr=swmr)
+  File "/users/wrb15144/EEG-To-Text/venv/lib64/python3.6/site-packages/h5py/_hl/files.py", line 190, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 96, in h5py.h5f.open
+OSError: Unable to open file (file signature not found)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../util/construct_dataset_mat_to_pickle_v1.py", line 74, in <module>
+    data_dict = mat73.loadmat(mat_file)
+  File "/users/wrb15144/EEG-To-Text/venv/lib64/python3.6/site-packages/mat73/core.py", line 326, in loadmat
+    'Load with scipy.io.loadmat() instead.'.format(filename))
+TypeError: /users/wrb15144/temp_data/osfstorage-archive/task1-SR/Matlab_files/resultsZDN_SR.mat is not a MATLAB 7.3 file. Load with scipy.io.loadmat() instead.
+===================================================================================
+SLURM job  ended:     Tue Jul 11 21:09:59 BST 2023 (Unix Epoch time: 1689106199)
+This is an estimated end time using the 'date' command from node archie-w.hpc.strath.ac.uk
+For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
+======================================================================================
