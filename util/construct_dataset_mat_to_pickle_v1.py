@@ -14,9 +14,6 @@ import numpy as np
 import pickle
 import argparse
 
-from util.Convertor import Convertor
-from util.Reader import Reader
-
 
 def check_if_numpy_array(data):
     if isinstance(data, np.ndarray):
@@ -41,6 +38,7 @@ elif args["machine"] == "tehr09" or args["machine"] == "tehr10":
     sys.path.insert(1, "/home/wrb15144/zenon/EEG-To-Text/")
 
 from util.Convertor import Convertor
+from util.Reader import Reader
 """config"""
 version = args["version"] # 'old'
 # version = 'v2' # 'new'
