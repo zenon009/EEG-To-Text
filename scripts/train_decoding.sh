@@ -1,4 +1,4 @@
-python3 train_decoding.py --model_name BrainTranslator \
+python3 ../train_decoding.py --model_name BrainTranslator \
     --task_name task1_task2_task3 \
     --one_step \
     --pretrained \
