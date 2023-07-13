@@ -1,5 +1,5 @@
 python3 train_decoding.py --model_name BrainTranslator \
-    --task_name task1_task2_taskNRv2 \
+    --task_name task1_task2_task3 \
     --one_step \
     --pretrained \
     --not_load_step1_checkpoint \
@@ -8,7 +8,9 @@ python3 train_decoding.py --model_name BrainTranslator \
     -lr1 0.00005 \
     -lr2 0.0000005 \
     -b 32 \
-    -s ./checkpoints/decoding \
-    -cuda cuda:0
+    -cuda cuda:0 \
+    --dataset_path_task1 /users/wrb15144/temp_data/preprocessed_zuco_1/task1 \
+    --dataset_path_task2 /users/wrb15144/temp_data/preprocessed_zuco_1/task2 \
+    --dataset_path_task3 /users/wrb15144/temp_data/preprocessed_zuco_1/task3 \
 
 

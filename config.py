@@ -38,6 +38,9 @@ def get_config(case):
         parser.add_argument('-eeg', '--eeg_type', help='choose from {GD, FFD, TRT}', default = 'GD', required=False)
         parser.add_argument('-band', '--eeg_bands', nargs='+', help='specify freqency bands', default = ['_t1','_t2','_a1','_a2','_b1','_b2','_g1','_g2'] , required=False)
         parser.add_argument('-cuda', '--cuda', help='specify cuda device name, e.g. cuda:0, cuda:1, etc', default = 'cuda:0')
+        parser.add_argument("--dataset_path_task1")
+        parser.add_argument("--dataset_path_task2")
+        parser.add_argument("--dataset_path_task3")
         
         args = vars(parser.parse_args())
 
