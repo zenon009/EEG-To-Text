@@ -1,0 +1,106 @@
+===================================================================================
+SLURM Job ID:            
+Submit time:             Wed Jul 05 15:59:35 BST 2023 (Unix Epoch time: 1688569175)
+Start time:              Thu Jul 06 03:26:38 BST 2023 (Unix Epoch time: 1688610398)
+No. nodes:               
+No. tasks:               
+Job name:                
+Account:                 
+QoS:                     normal
+Partition (queue):       
+Submit directory:        
+Script name:             /users/kbb22110/Gaussian/run_script_M08.sh
+Master node:             
+Nodes used:              
+Task distribution:       
+===================================================================================
+
+##############################
+start processing ZuCo task1-SR...
+Convertor object created
+Reader object created
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|8         | 1/12 [07:37<1:23:54, 457.67s/it] 17%|#6        | 2/12 [15:27<1:17:28, 464.88s/it] 25%|##5       | 3/12 [15:51<39:32, 263.60s/it]   33%|###3      | 4/12 [24:00<47:00, 352.52s/it] 42%|####1     | 5/12 [32:32<47:50, 410.04s/it] 50%|#####     | 6/12 [41:12<44:43, 447.31s/it] 58%|#####8    | 7/12 [49:28<38:36, 463.29s/it] 67%|######6   | 8/12 [57:37<31:26, 471.57s/it] 75%|#######5  | 9/12 [1:06:01<24:04, 481.60s/it] 83%|########3 | 10/12 [1:14:44<16:28, 494.38s/it] 92%|#########1| 11/12 [1:22:46<08:10, 490.75s/it]100%|##########| 12/12 [1:31:08<00:00, 494.19s/it]100%|##########| 12/12 [1:31:08<00:00, 455.74s/it]
+write to: ./dataset/ZuCo/task1-SR/pickle/task1-SR-dataset.pickle
+subjects: dict_keys(['ZAB', 'ZDM', 'ZDN', 'ZGW', 'ZJM', 'ZJN', 'ZJS', 'ZKB', 'ZKH', 'ZKW', 'ZMG', 'ZPH'])
+===================================================================================
+SLURM job  ended:     Wed Jul 12 14:45:08 BST 2023 (Unix Epoch time: 1689169508)
+This is an estimated end time using the 'date' command from node archie-t.hpc.strath.ac.uk
+For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
+======================================================================================
+===================================================================================
+SLURM Job ID:            
+Submit time:             Wed Jul 05 15:59:35 BST 2023 (Unix Epoch time: 1688569175)
+Start time:              Thu Jul 06 03:26:38 BST 2023 (Unix Epoch time: 1688610398)
+No. nodes:               
+No. tasks:               
+Job name:                
+Account:                 
+QoS:                     normal
+Partition (queue):       
+Submit directory:        
+Script name:             /users/kbb22110/Gaussian/run_script_M08.sh
+Master node:             
+Nodes used:              
+Task distribution:       
+===================================================================================
+
+./archiewest_run.sh: line 46: python: command not found
+===================================================================================
+SLURM job  ended:     Wed Jul 12 15:18:42 BST 2023 (Unix Epoch time: 1689171522)
+This is an estimated end time using the 'date' command from node archie-t.hpc.strath.ac.uk
+For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
+======================================================================================
+===================================================================================
+SLURM Job ID:            
+Submit time:             Wed Jul 05 15:59:35 BST 2023 (Unix Epoch time: 1688569175)
+Start time:              Thu Jul 06 03:26:38 BST 2023 (Unix Epoch time: 1688610398)
+No. nodes:               
+No. tasks:               
+Job name:                
+Account:                 
+QoS:                     normal
+Partition (queue):       
+Submit directory:        
+Script name:             /users/kbb22110/Gaussian/run_script_M08.sh
+Master node:             
+Nodes used:              
+Task distribution:       
+===================================================================================
+
+##############################
+start processing ZuCo task2-NR...
+Convertor object created
+Reader object created
+  0%|          | 0/11 [00:00<?, ?it/s]./archiewest_run.sh: line 46: 3129471 Terminated              python ../util/construct_dataset_mat_to_pickle_v1.py -t task2-NR -v "v2" -d "/users/wrb15144/temp_data/osfstorage-archive/" -o "/users/wrb15144/temp_data/preprocessed_zuco_1/task2/" -m "archie-west"
+===================================================================================
+SLURM job  ended:     Wed Jul 12 15:26:05 BST 2023 (Unix Epoch time: 1689171965)
+This is an estimated end time using the 'date' command from node archie-e.hpc.strath.ac.uk
+For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
+======================================================================================
+===================================================================================
+SLURM Job ID:            
+Submit time:             Wed Jul 05 15:59:35 BST 2023 (Unix Epoch time: 1688569175)
+Start time:              Thu Jul 06 03:26:38 BST 2023 (Unix Epoch time: 1688610398)
+No. nodes:               
+No. tasks:               
+Job name:                
+Account:                 
+QoS:                     normal
+Partition (queue):       
+Submit directory:        
+Script name:             /users/kbb22110/Gaussian/run_script_M08.sh
+Master node:             
+Nodes used:              
+Task distribution:       
+===================================================================================
+
+##############################
+start processing ZuCo task2-NR...
+Convertor object created
+Reader object created
+  0%|          | 0/11 [00:00<?, ?it/s]./archiewest_run.sh: line 46: 3148387 Terminated              python ../util/construct_dataset_mat_to_pickle_v1.py -t task2-NR -v "v2" -d "/users/wrb15144/temp_data/osfstorage-archive/" -o "/users/wrb15144/temp_data/preprocessed_zuco_1/task2/" -m "archie-west"
+===================================================================================
+SLURM job  ended:     Wed Jul 12 15:26:17 BST 2023 (Unix Epoch time: 1689171977)
+This is an estimated end time using the 'date' command from node archie-e.hpc.strath.ac.uk
+For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
+======================================================================================

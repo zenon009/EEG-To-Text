@@ -1,0 +1,29 @@
+===================================================================================
+SLURM Job ID:            
+Submit time:             Wed Jul 05 15:59:35 BST 2023 (Unix Epoch time: 1688569175)
+Start time:              Thu Jul 06 03:26:38 BST 2023 (Unix Epoch time: 1688610398)
+No. nodes:               
+No. tasks:               
+Job name:                
+Account:                 
+QoS:                     normal
+Partition (queue):       
+Submit directory:        
+Script name:             /users/kbb22110/Gaussian/run_script_M08.sh
+Master node:             
+Nodes used:              
+Task distribution:       
+===================================================================================
+
+##############################
+start processing ZuCo task2-NR...
+Convertor object created
+Reader object created
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|9         | 1/11 [06:54<1:09:06, 414.66s/it] 18%|#8        | 2/11 [13:22<59:52, 399.13s/it]   27%|##7       | 3/11 [19:35<51:36, 387.09s/it] 36%|###6      | 4/11 [26:24<46:09, 395.70s/it] 45%|####5     | 5/11 [34:20<42:27, 424.56s/it] 55%|#####4    | 6/11 [44:09<40:02, 480.55s/it] 64%|######3   | 7/11 [51:53<31:40, 475.10s/it] 73%|#######2  | 8/11 [58:40<22:40, 453.40s/it] 82%|########1 | 9/11 [1:05:48<14:50, 445.50s/it] 91%|######### | 10/11 [1:12:22<07:09, 429.68s/it]100%|##########| 11/11 [1:12:57<00:00, 308.86s/it]100%|##########| 11/11 [1:12:57<00:00, 397.97s/it]
+write to: ./dataset/ZuCo/task2-NR/pickle/task2-NR-dataset.pickle
+subjects: dict_keys(['ZAB', 'ZDM', 'ZDN', 'ZGW', 'ZJM', 'ZJN', 'ZKB', 'ZKH', 'ZKW', 'ZMG', 'ZPH'])
+===================================================================================
+SLURM job  ended:     Wed Jul 12 16:43:58 BST 2023 (Unix Epoch time: 1689176638)
+This is an estimated end time using the 'date' command from node archie-e.hpc.strath.ac.uk
+For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
+======================================================================================

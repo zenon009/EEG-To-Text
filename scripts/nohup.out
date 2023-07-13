@@ -1,0 +1,29 @@
+===================================================================================
+SLURM Job ID:            
+Submit time:             Wed Jul 05 15:59:35 BST 2023 (Unix Epoch time: 1688569175)
+Start time:              Thu Jul 06 03:26:38 BST 2023 (Unix Epoch time: 1688610398)
+No. nodes:               
+No. tasks:               
+Job name:                
+Account:                 
+QoS:                     normal
+Partition (queue):       
+Submit directory:        
+Script name:             /users/kbb22110/Gaussian/run_script_M08.sh
+Master node:             
+Nodes used:              
+Task distribution:       
+===================================================================================
+
+##############################
+start processing ZuCo task3-TSR...
+Convertor object created
+Reader object created
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|9         | 1/11 [07:21<1:13:36, 441.65s/it] 18%|#8        | 2/11 [14:33<1:05:25, 436.18s/it] 27%|##7       | 3/11 [21:35<57:15, 429.42s/it]   36%|###6      | 4/11 [28:49<50:19, 431.41s/it] 45%|####5     | 5/11 [37:11<45:39, 456.57s/it] 55%|#####4    | 6/11 [45:30<39:15, 471.07s/it] 64%|######3   | 7/11 [52:03<29:42, 445.60s/it] 73%|#######2  | 8/11 [1:00:08<22:54, 458.23s/it] 82%|########1 | 9/11 [1:08:22<15:39, 469.51s/it] 91%|######### | 10/11 [1:15:48<07:42, 462.08s/it]100%|##########| 11/11 [1:22:40<00:00, 446.66s/it]100%|##########| 11/11 [1:22:40<00:00, 450.92s/it]
+write to: ./dataset/ZuCo/task3-TSR/pickle/task3-TSR-dataset.pickle
+subjects: dict_keys(['ZAB', 'ZDM', 'ZDN', 'ZGW', 'ZJM', 'ZJN', 'ZKB', 'ZKH', 'ZKW', 'ZMG', 'ZPH'])
+===================================================================================
+SLURM job  ended:     Wed Jul 12 18:50:22 BST 2023 (Unix Epoch time: 1689184222)
+This is an estimated end time using the 'date' command from node archie-t.hpc.strath.ac.uk
+For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
+======================================================================================
