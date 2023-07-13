@@ -27,3 +27,4 @@ SLURM job  ended:     Wed Jul 12 18:50:22 BST 2023 (Unix Epoch time: 1689184222)
 This is an estimated end time using the 'date' command from node archie-t.hpc.strath.ac.uk
 For accurate timings, use 'sacct -j  -X --format=Submit,Start,End,Elapsed'
 ======================================================================================
+ssh: Could not resolve hostname cpunode: Temporary failure in name resolution

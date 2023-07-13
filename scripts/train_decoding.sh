@@ -9,8 +9,9 @@ python3 ../train_decoding.py --model_name BrainTranslator \
     -lr2 0.0000005 \
     -b 32 \
     -cuda cuda:0 \
-    --dataset_path_task1 /users/wrb15144/temp_data/preprocessed_zuco_1/task1 \
-    --dataset_path_task2 /users/wrb15144/temp_data/preprocessed_zuco_1/task2 \
-    --dataset_path_task3 /users/wrb15144/temp_data/preprocessed_zuco_1/task3 \
+    --dataset_path_task1 /vol/bulkdata/wrb15144/encoder_decoder/preprocessed_zuco_1/task1/task1-SR-dataset.json \
+    --dataset_path_task2 /vol/bulkdata/wrb15144/encoder_decoder/preprocessed_zuco_1/task2/task2-NR-dataset.json \
+    --dataset_path_task3 /vol/bulkdata/wrb15144/encoder_decoder/preprocessed_zuco_1/task3/task3-TSR-dataset.json \
+    -s "./"
 
 
