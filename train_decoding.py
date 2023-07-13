@@ -40,7 +40,7 @@ def train_model(dataloaders, device, model, criterion, optimizer, scheduler, num
             running_loss = 0.0
 
             # Iterate over data.
-            for input_embeddings, seq_len, input_masks, input_mask_invert, target_ids, target_mask, sentiment_labels, sent_level_EEG in tqdm(dataloaders[phase]):
+            for input_embeddings, seq_len, input_masks, input_mask_invert, target_ids, target_mask in tqdm(dataloaders[phase]):
                 
                 # load in batch
                 input_embeddings_batch = input_embeddings.to(device).float()

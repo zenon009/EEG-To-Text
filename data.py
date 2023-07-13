@@ -57,11 +57,11 @@ def get_input_sample(sent_obj, tokenizer, eeg_type = 'GD', bands = ['_t1','_t2',
     input_sample['target_ids'] = target_tokenized['input_ids'][0]
     
     # get sentence level EEG features
-    sent_level_eeg_tensor = get_sent_eeg(sent_obj, bands)
-    if torch.isnan(sent_level_eeg_tensor).any():
-        # print('[NaN sent level eeg]: ', target_string)
-        return None
-    input_sample['sent_level_EEG'] = sent_level_eeg_tensor
+    # sent_level_eeg_tensor = get_sent_eeg(sent_obj, bands)
+    # if torch.isnan(sent_level_eeg_tensor).any():
+    #     # print('[NaN sent level eeg]: ', target_string)
+    #     return None
+    # input_sample['sent_level_EEG'] = sent_level_eeg_tensor
 
     # get sentiment label
     # handle some wierd case
@@ -223,9 +223,7 @@ class ZuCo_dataset(Dataset):
             input_sample['input_attn_mask'], 
             input_sample['input_attn_mask_invert'],
             input_sample['target_ids'], 
-            input_sample['target_mask'], 
-            input_sample['sentiment_label'], 
-            input_sample['sent_level_EEG']
+            input_sample['target_mask']
         )
         # keys: input_embeddings, input_attn_mask, input_attn_mask_invert, target_ids, target_mask, 
 
@@ -318,7 +316,7 @@ if __name__ == '__main__':
 
     elif check_dataset == 'stanford_sentiment':
         tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
-        SST_dataset = SST_tenary_dataset(SST_SENTIMENT_LABELS, tokenizer)
-        print('SST dataset size:',len(SST_dataset))
-        print(SST_dataset[0])
-        print(SST_dataset[1])
+        # SST_dataset = SST_tenary_dataset(SST_SENTIMENT_LABELS, tokenizer)
+        # print('SST dataset size:',len(SST_dataset))
+        # print(SST_dataset[0])
+        # print(SST_dataset[1])
