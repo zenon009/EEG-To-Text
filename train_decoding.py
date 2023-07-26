@@ -7,8 +7,6 @@ from torch.optim import lr_scheduler
 from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampler
 import pickle
 import json
-import matplotlib.pyplot as plt
-from glob import glob
 import time
 import copy
 from tqdm import tqdm
@@ -33,6 +31,7 @@ def train_model(dataloaders, device, model, criterion, optimizer, scheduler, num
         # Each epoch has a training and validation phase
         for phase in ['train', 'dev']:
             if phase == 'train':
+                print("Training")
                 model.train()  # Set model to training mode
             else:
                 model.eval()   # Set model to evaluate mode
@@ -250,9 +249,9 @@ if __name__ == '__main__':
     print('[INFO]dev_set size: ', len(dev_set))
     
     # train dataloader
-    train_dataloader = DataLoader(train_set, batch_size = batch_size, shuffle=True, num_workers=4)
+    train_dataloader = DataLoader(train_set, batch_size = batch_size, shuffle=True, num_workers=1)
     # dev dataloader
-    val_dataloader = DataLoader(dev_set, batch_size = 1, shuffle=False, num_workers=4)
+    val_dataloader = DataLoader(dev_set, batch_size = 1, shuffle=False, num_workers=1)
     # dataloaders
     dataloaders = {'train':train_dataloader, 'dev':val_dataloader}
 
