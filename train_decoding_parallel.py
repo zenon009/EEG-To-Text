@@ -276,6 +276,11 @@ if __name__ == '__main__':
         model = BrainTranslatorNaive(pretrained, in_feature = 105*len(bands_choice), decoder_embedding_size = 1024, additional_encoder_nhead=8, additional_encoder_dim_feedforward = 2048)
 
     #model.to(device)
+
+    model = nn.DataParallel(model)
+    gpu = ["cuda:0","cuda:1"]
+    torch.cuda.set_device(gpu)
+    model.cuda(gpu)
     
     ''' training loop '''
 
