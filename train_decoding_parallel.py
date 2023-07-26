@@ -278,7 +278,7 @@ if __name__ == '__main__':
     #model.to(device)
 
     model = nn.DataParallel(model)
-    gpu = ["cuda:0","cuda:1"]
+    gpu = 2
     torch.cuda.set_device(gpu)
     model.cuda(gpu)
     
