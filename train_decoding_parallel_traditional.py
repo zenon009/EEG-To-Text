@@ -279,9 +279,9 @@ if __name__ == '__main__':
         model = BrainTranslatorNaive(pretrained, in_feature = 105*len(bands_choice), decoder_embedding_size = 1024, additional_encoder_nhead=8, additional_encoder_dim_feedforward = 2048)
 
     #model.to(device)
-
-    rank = dist.get_rank()
     dist.init_process_group("nccl")
+    rank = dist.get_rank()
+
     device_id = rank % torch.cuda.device_count()
     model = model.to(device_id)
     model = DDP(model, device_ids=[device_id])
