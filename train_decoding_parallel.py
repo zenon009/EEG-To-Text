@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import torch.distributed as dist
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -18,6 +19,7 @@ from data import ZuCo_dataset
 from model_decoding import BrainTranslator, BrainTranslatorNaive
 from config import get_config
 from accelerate import Accelerator
+from torch.nn.parallel import DistributedDataParallel as DDP
 def train_model(dataloaders, device, model, criterion, optimizer, scheduler, num_epochs=25, checkpoint_path_best = './checkpoints/decoding/best/temp_decoding.pt', checkpoint_path_last = './checkpoints/decoding/last/temp_decoding.pt'):
     # modified from: https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
 
@@ -276,11 +278,15 @@ if __name__ == '__main__':
         model = BrainTranslatorNaive(pretrained, in_feature = 105*len(bands_choice), decoder_embedding_size = 1024, additional_encoder_nhead=8, additional_encoder_dim_feedforward = 2048)
 
     #model.to(device)
+    dist.init_process_group("nccl")
+    rank = dist.get_rank()
+    device_id = rank % torch.cuda.device_count()
+    model = model.to(device_id)
+    model = DDP(model, device_ids=[device_id])
 
-    model = nn.DataParallel(model)
-    gpu = 2
-    torch.cuda.set_device(gpu)
-    model.cuda(gpu)
+
+    model = DDP(model)
+
     
     ''' training loop '''
 
