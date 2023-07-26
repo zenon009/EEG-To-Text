@@ -1,4 +1,4 @@
-torchrun --nnodes=1 --nproc_per_node=2 --rdzv_id=100 --rdzv_backend=c10d ../train_decoding_parallel.py --model_name BrainTranslator \
+torchrun --nnodes=1 --nproc_per_node=2 --rdzv_id=100 --rdzv_backend=c10d ../train_decoding_parallel_traditional.py --model_name BrainTranslator \
     --task_name task2 \
     --one_step \
     --pretrained \

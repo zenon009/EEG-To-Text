@@ -86,7 +86,8 @@ def train_model(dataloaders, device, model, criterion, optimizer, scheduler, num
                 # backward + optimize only if in training phase
                 if phase == 'train':
                     # with torch.autograd.detect_anomaly():
-                    accelerator.backward(loss)
+                    #accelerator.backward(loss)
+                    loss.backward()
                     optimizer.step()
 
                 # statistics
@@ -130,7 +131,7 @@ def show_require_grad_layers(model):
             print(' ', name)
 
 if __name__ == '__main__':
-    accelerator = Accelerator()
+    #accelerator = Accelerator()
     args = get_config('train_decoding')
 
     ''' config param'''
@@ -279,7 +280,14 @@ if __name__ == '__main__':
 
     #model.to(device)
 
+    rank = dist.get_rank()
+    dist.init_process_group("nccl")
+    device_id = rank % torch.cuda.device_count()
+    model = model.to(device_id)
+    model = DDP(model, device_ids=[device_id])
 
+
+    model = DDP(model)
 
     
     ''' training loop '''
@@ -327,9 +335,9 @@ if __name__ == '__main__':
         show_require_grad_layers(model)
         # return best loss model from step1 training
 
-        train_dataloader, eval_dataloader, model, optimizer = accelerator.prepare(
-            train_dataloader, val_dataloader, model, optimizer_step1
-        )
+        # train_dataloader, eval_dataloader, model, optimizer = accelerator.prepare(
+        #     train_dataloader, val_dataloader, model, optimizer_step1
+        # )
         dataloaders = {'train': train_dataloader, 'dev': val_dataloader}
         model = train_model(dataloaders, device, model, criterion, optimizer_step1, exp_lr_scheduler_step1, num_epochs=num_epochs_step1, checkpoint_path_best = output_checkpoint_name_best, checkpoint_path_last = output_checkpoint_name_last)
 
@@ -353,9 +361,9 @@ if __name__ == '__main__':
     show_require_grad_layers(model)
     
     '''main loop'''
-    train_dataloader, eval_dataloader, model, optimizer = accelerator.prepare(
-        train_dataloader, val_dataloader, model, optimizer_step2
-    )
+    # train_dataloader, eval_dataloader, model, optimizer = accelerator.prepare(
+    #     train_dataloader, val_dataloader, model, optimizer_step2
+    # )
     dataloaders = {'train': train_dataloader, 'dev': val_dataloader}
     trained_model = train_model(dataloaders, device, model, criterion, optimizer_step2, exp_lr_scheduler_step2, num_epochs=num_epochs_step2, checkpoint_path_best = output_checkpoint_name_best, checkpoint_path_last = output_checkpoint_name_last)
 
