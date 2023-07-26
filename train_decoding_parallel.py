@@ -44,10 +44,10 @@ def train_model(dataloaders, device, model, criterion, optimizer, scheduler, num
             for input_embeddings, seq_len, input_masks, input_mask_invert, target_ids, target_mask in tqdm(dataloaders[phase]):
                 
                 # load in batch
-                input_embeddings_batch = input_embeddings.to(device).float()
-                input_masks_batch = input_masks.to(device)
-                input_mask_invert_batch = input_mask_invert.to(device)
-                target_ids_batch = target_ids.to(device)
+                input_embeddings_batch = input_embeddings.float() #input_embeddings.to(device).float()
+                input_masks_batch = input_masks#.to(device)
+                input_mask_invert_batch = input_mask_invert#.to(device)
+                target_ids_batch = target_ids#.to(device)
                 """replace padding ids in target_ids with -100"""
                 target_ids_batch[target_ids_batch == tokenizer.pad_token_id] = -100 
               
@@ -275,7 +275,7 @@ if __name__ == '__main__':
         pretrained = BartForConditionalGeneration.from_pretrained('facebook/bart-large')
         model = BrainTranslatorNaive(pretrained, in_feature = 105*len(bands_choice), decoder_embedding_size = 1024, additional_encoder_nhead=8, additional_encoder_dim_feedforward = 2048)
 
-    model.to(device)
+    #model.to(device)
     
     ''' training loop '''
 
