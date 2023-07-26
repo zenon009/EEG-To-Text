@@ -1,4 +1,4 @@
-accelerate launch ../train_decoding_parallel.py --model_name BrainTranslator \
+accelerate launch --multi_gpu --num_processes 2 ../train_decoding_parallel.py --model_name BrainTranslator \
     --task_name task2 \
     --one_step \
     --pretrained \
