@@ -126,7 +126,7 @@ def show_require_grad_layers(model):
             print(' ', name)
 
 if __name__ == '__main__':
-    os.environ['WORLD_SIZE'] = 1
+    os.environ['LOCAL_RANK'] = "2"
     args = get_config('train_decoding')
 
     ''' config param'''
