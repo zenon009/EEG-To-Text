@@ -1,4 +1,4 @@
-python3 -m torch.distributed.launch ../train_decoding.py --model_name BrainTranslator \
+python3 -m torch.distributed.launch ../train_decoding_trainer.py --model_name BrainTranslator \
     --task_name task1_task2_task3 \
     --one_step \
     --pretrained \
