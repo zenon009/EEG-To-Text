@@ -20,7 +20,7 @@ def get_config(case):
         
         parser.add_argument('-1step', '--one_step', dest='skip_step_one', action='store_true')
         parser.add_argument('-2step', '--two_step', dest='skip_step_one', action='store_false')
-
+        parser.add_argument("--local_rank", type=int, default=0)
         parser.add_argument('-pre', '--pretrained', dest='use_random_init', action='store_false')
         parser.add_argument('-rand', '--rand_init', dest='use_random_init', action='store_true')
         
